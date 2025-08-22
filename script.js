@@ -88,19 +88,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const researchSection = document.querySelector('#research');
-    if (researchSection) {
-        const researchObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.3 });
-        researchObserver.observe(researchSection);
-    }
+// Replace it with this updated code
+const researchGrid = document.querySelector('.research-grid'); // <-- Changed this line
+if (researchGrid) {                                            // <-- Changed this line
+    const researchObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 }); // <-- Lowered threshold for a quicker trigger
 
+    researchObserver.observe(researchGrid); // <-- Changed this line
+}
     // Mobile Carousel functionality
     const carouselContainer = document.getElementById('carouselContainer');
     const indicatorsContainer = document.getElementById('indicators');
