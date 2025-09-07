@@ -142,7 +142,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: url("image/bg22.webp") no-repeat center center/cover;
+    background: url("image/bg22.jpeg") no-repeat center center/cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -903,4 +903,5 @@ footer#contact-details {
     
     }
 }
+
 
